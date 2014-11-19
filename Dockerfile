@@ -9,8 +9,8 @@ MAINTAINER Anderson G. Martins, anderson@grudtner.me
 
 # add some build tools
 RUN apt-get update && \
+    apt-get build-dep php5 -y && \
     apt-get install -y \
-    apt-get build-dep php5 \
     apache2 \
     apache2-mpm-prefork \
     git \
