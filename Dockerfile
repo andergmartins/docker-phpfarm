@@ -3,7 +3,7 @@
 #
 
 # we use Debian as the host OS
-FROM debian:wheezy
+FROM phusion/baseimage
 
 MAINTAINER Andreas Gohr, andi@splitbrain.org
 
