@@ -18,7 +18,7 @@ Building the image
 
 After checkout, simply run the following command:
 
-    docker build -t splitbrain/phpfarm .
+    docker build -t andergmartins/phpfarm .
 
 This will setup a base Debian system, install phpfarm, download and compile the four
 PHP versions and setup Apache. So, yes this will take a while. See the next section
@@ -30,7 +30,7 @@ Downloading the image
 Simply downloading the ready made image from index.docker.io is probably the fastest
 way. Just run this:
 
-    docker pull splitbrain/phpfarm
+    docker pull andergmartins/phpfarm
 
 Please note that this image might be somewhat behind from what the Dockerfile would
 build, but my upload speed is too limited to upload a gigabyte in a timely fashion.
@@ -43,7 +43,7 @@ local machine. The current working directory will be used as the document root f
 the Apache server and the server it self will run with the same user id as your current
 user.
 
-    docker run --rm -t -i -e APACHE_UID=$UID -v $PWD:/var/www:rw -p 8052:8052 -p 8053:8053 -p 8054:8054 -p 8055:8055 -p 8056:8056 splitbrain/phpfarm
+    docker run --rm -t -i -e APACHE_UID=$UID -v $PWD:/var/www:rw -p 8052:8052 -p 8053:8053 -p 8054:8054 -p 8055:8055 -p 8056:8056 andergmartins/phpfarm
 
 Above command will also remove the container again when the process is aborted with
 CTRL-C. While running the Apache and PHP error log is shown on STDOUT.
