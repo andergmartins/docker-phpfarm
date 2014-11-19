@@ -5,7 +5,7 @@
 # we use Debian as the host OS
 FROM phusion/baseimage
 
-MAINTAINER Andreas Gohr, andi@splitbrain.org
+MAINTAINER Anderson G. Martins, anderson@grudtner.me
 
 # add some build tools
 RUN apt-get update && \
